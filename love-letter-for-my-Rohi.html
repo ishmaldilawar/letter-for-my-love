@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Love Letter for Rohi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay start" id="startOverlay">
+    <div class="center">
+      <h1>Tap to open 💌</h1>
+      <p class="hint">Tap anywhere to start music and reveal the pendant</p>
+    </div>
+  </div>
+
+  <header class="controls">
+    <button id="muteBtn" aria-pressed="false">🔈 Mute</button>
+    <label class="small-input">YouTube (optional): <input id="youtubeUrl" placeholder="Paste YouTube URL to use audio" /></label>
+    <button id="setYoutube">Set Music</button>
+  </header>
+
+  <main>
+    <section class="stage" id="stage">
+      <div class="pendant-wrap">
+        <div class="pendant" id="pendant">
+          <div class="half left" id="leftHalf">
+            <label class="photo" id="leftPhoto">Tap or drop to add photo
+              <input type="file" accept="image/*" id="leftFile" aria-label="Left photo input">
+            </label>
+          </div>
+          <div class="half right" id="rightHalf">
+            <label class="photo" id="rightPhoto">Tap or drop to add photo
+              <input type="file" accept="image/*" id="rightFile" aria-label="Right photo input">
+            </label>
+          </div>
+          <div class="pendant-knot" id="pendantKnot"></div>
+        </div>
+      </div>
+      <div class="actions" id="afterOpen" hidden>
+        <button id="toLetter">Open the letter</button>
+      </div>
+    </section>
+
+    <section class="letter" id="letterSection" hidden>
+      <div class="card">
+        <h2>Your letter</h2>
+        <textarea id="letterInput" placeholder="Write your letter here..."></textarea>
+        <div class="letter-actions">
+          <button id="downloadBtn">Download / Print</button>
+          <button id="finishBtn">Finish</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" id="finalSection" hidden>
+      <div class="final-card">
+        <h1>i love you</h1>
+      </div>
+    </section>
+  </main>
+
+  <canvas id="confettiCanvas" class="confetti"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
